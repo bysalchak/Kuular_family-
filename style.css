@@ -287,3 +287,32 @@
     letter-spacing: 0.12em;
   }
 }
+/* Затемнение фотографии до самого нижнего края */
+
+.names::before {
+  display: none !important;
+}
+
+.portrait::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(2, 9, 6, 0.25) 25%,
+    rgba(2, 9, 6, 0.72) 70%,
+    rgba(2, 9, 6, 0.92) 100%
+  );
+}
+
+.portrait .names,
+.portrait .together,
+.portrait .quote {
+  z-index: 2;
+}
