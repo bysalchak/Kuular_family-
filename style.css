@@ -316,3 +316,267 @@
 .portrait .quote {
   z-index: 2;
 }
+/* Новый минималистичный календарь */
+
+.calendar-section {
+  position: relative;
+  min-height: 100svh;
+  display: block;
+  padding: 100px 22px 90px;
+  color: #34342f;
+  background: #f5f2eb !important;
+  text-align: center;
+}
+
+.calendar-section::before {
+  display: none !important;
+}
+
+.calendar-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.calendar-section > small {
+  display: block;
+  color: #7e896d;
+  font: 300 12px "Montserrat", sans-serif;
+  letter-spacing: 0.38em;
+}
+
+.calendar-section > h2 {
+  margin: 45px 0 5px;
+  color: #34342f !important;
+  font-size: clamp(4.5rem, 16vw, 7rem);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 0.9;
+}
+
+.calendar-year {
+  margin-bottom: 70px;
+  color: #839072;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.minimal-calendar {
+  width: min(650px, 100%);
+  margin: auto;
+}
+
+.calendar-week,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  text-align: center;
+}
+
+.calendar-week {
+  margin-bottom: 40px;
+  color: #93958c;
+  font: 400 12px "Montserrat", sans-serif;
+}
+
+.calendar-grid {
+  row-gap: 23px;
+}
+
+.calendar-grid > span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin: auto;
+  color: #3c3c36;
+  font-size: 1.45rem;
+  font-style: italic;
+}
+
+.selected-date {
+  color: #ffffff !important;
+  border-radius: 50%;
+  background: #7e8b68;
+  box-shadow: 0 8px 20px rgba(88, 101, 69, 0.24);
+  animation: datePulse 2.4s ease-in-out infinite;
+}
+
+/* Маленький лёгкий салют вокруг числа */
+
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #bc8b4c;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spark::before,
+.spark::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #d3aa72;
+}
+
+.spark::before {
+  transform: translate(-10px, 6px);
+}
+
+.spark::after {
+  transform: translate(9px, -7px);
+}
+
+.spark-one {
+  top: -5px;
+  left: 5px;
+  animation: smallFirework 2.8s ease-out infinite;
+}
+
+.spark-two {
+  top: 5px;
+  right: -2px;
+  animation: smallFirework 2.8s 0.9s ease-out infinite;
+}
+
+.spark-three {
+  right: 8px;
+  bottom: -4px;
+  animation: smallFirework 2.8s 1.8s ease-out infinite;
+}
+
+.calendar-caption {
+  margin: 65px 0 45px !important;
+  color: #758064;
+  font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+  font-style: italic;
+}
+
+.calendar-celebration {
+  display: grid;
+  gap: 8px;
+  width: min(430px, 100%);
+  margin: 0 auto 45px;
+  padding: 30px 15px;
+  border-top: 1px solid rgba(126, 139, 104, 0.35);
+  border-bottom: 1px solid rgba(126, 139, 104, 0.35);
+}
+
+.calendar-celebration span {
+  color: #7e896d;
+  font: 300 11px "Montserrat", sans-serif;
+  letter-spacing: 0.32em;
+}
+
+.calendar-celebration strong {
+  color: #a6753f;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.calendar-celebration em {
+  color: #758064;
+  font-size: 1.65rem;
+}
+
+.calendar-place {
+  color: #45453e;
+  font-size: 1.4rem !important;
+  line-height: 1.5;
+}
+
+.calendar-section > a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  color: #758064;
+  border: 1px solid #879173;
+  background: transparent;
+  text-decoration: none;
+  font: 400 11px "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.letter-ending {
+  font-size: 1.3rem !important;
+  color: #79542e;
+}
+
+@keyframes datePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes smallFirework {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .calendar-section {
+    padding: 80px 14px 75px;
+  }
+
+  .calendar-section > h2 {
+    margin-top: 38px;
+  }
+
+  .calendar-year {
+    margin-bottom: 55px;
+    font-size: 2.5rem;
+  }
+
+  .calendar-week {
+    margin-bottom: 32px;
+    font-size: 10px;
+  }
+
+  .calendar-grid {
+    row-gap: 18px;
+  }
+
+  .calendar-grid > span {
+    width: 39px;
+    height: 39px;
+    font-size: 1.25rem;
+  }
+
+  .calendar-caption {
+    margin-top: 55px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .selected-date,
+  .spark {
+    animation: none;
+  }
+}
