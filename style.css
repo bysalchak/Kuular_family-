@@ -580,3 +580,54 @@
     animation: none;
   }
 }
+/* Показываем фотографию родителей полностью */
+
+.portrait {
+  position: relative;
+  isolation: isolate;
+  background: #07130e;
+}
+
+/* Мягкое заполнение пустого пространства */
+
+.portrait::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -25px;
+  background:
+    linear-gradient(rgba(3, 14, 9, 0.48), rgba(3, 14, 9, 0.48)),
+    url("parents.jpeg") center / cover no-repeat;
+  filter: blur(18px);
+}
+
+/* Основная фотография без обрезания людей */
+
+.portrait > img {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center center !important;
+  filter: none !important;
+}
+
+/* Плавное затемнение только снизу */
+
+.portrait::after {
+  z-index: 1;
+  height: 52%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(2, 9, 6, 0.2) 25%,
+    rgba(2, 9, 6, 0.7) 72%,
+    rgba(2, 9, 6, 0.94) 100%
+  );
+}
+
+.portrait .quote,
+.portrait .names,
+.portrait .together {
+  z-index: 2;
+}
