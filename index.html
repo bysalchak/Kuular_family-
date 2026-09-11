@@ -1,277 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#07150f">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta name="theme-color"" content="#06140e">
+
   <title>Семья Куулар — приглашение</title>
-  <meta name="description" content="Приглашение на семейный праздник Бориса Бораннайовича и Ураны Энеевны">
+
+  <meta
+    name="description"
+    content="Приглашение на двойной юбилей Бориса Бораннайовича и Ураны Энеевны"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <main>
+
+    <!-- 1. КОНВЕРТ И ПИСЬМО -->
+
     <section class="opening" id="opening">
-      <header><span>ДЛЯ САМЫХ РОДНЫХ</span><i>────── ♡ ──────</i></header>
-      <button class="envelope" id="envelope" aria-label="Открыть приглашение">
-        <img src="envelope.png" alt="">
+
+      <header>
+        <span>ДЛЯ САМЫХ РОДНЫХ</span>
+        <i>────── ♡ ──────</i>
+      </header>
+
+      <button
+        class="envelope"
+        id="envelope"
+        type="button"
+        aria-label="Открыть приглашение"
+      >
+        <img
+          src="envelope.png"
+          alt="Бумажный конверт с золотой печатью"
+        >
       </button>
-      <button class="open-cta" id="openCta">НАЖМИТЕ, ЧТОБЫ ОТКРЫТЬ <b>⌄</b></button>
 
-<article class="letter" id="letter">
-  <small>ПРИГЛАШЕНИЕ</small>
+      <button
+        class="open-cta"
+        id="openCta"
+        type="button"
+      >
+        НАЖМИТЕ, ЧТОБЫ ОТКРЫТЬ
+        <b>⌄</b>
+      </button>
 
-  <h1>Дорогие родные<br>и друзья!</h1>
+      <article class="letter" id="letter">
 
-  <div class="rule">—— ♡ ——</div>
+        <small>ДВОЙНОЙ ЮБИЛЕЙ</small>
 
-  <p>
-    Есть даты, которые особенно дороги сердцу.
-  </p>
+        <h1 class="jubilee-numbers">
+          65 <i>|</i> 60
+        </h1>
 
-  <p>
-    3 октября наша семья отмечает сразу три счастливых события:
-    65-летний юбилей Бориса Бораннайовича,
-    60-летний юбилей Ураны Энеевны
-    и 35 лет их совместной жизни.
-  </p>
+        <p class="jubilee-names">
+          Борис Бораннайович<br>
+          и Урана Энеевна
+        </p>
 
-  <p>
-    Мы хотим провести этот особенный вечер рядом с людьми,
-    которые стали частью нашей семейной истории.
-  </p>
+        <div class="rule">—— ♡ ——</div>
 
-  <p class="letter-ending">
-    Будем счастливы разделить этот праздник с вами.
-  </p>
+        <p>
+          Дорогие родные и друзья!
+        </p>
 
-  <em>
-    С любовью,<br>
-    семья Куулар ♡
-  </em>
+        <p>
+          Приглашаем вас разделить с нами особенный семейный
+          праздник, наполненный тёплыми воспоминаниями,
+          радостью и любовью.
+        </p>
 
-  <button class="continue" id="continueBtn">
-    ПРОДОЛЖИТЬ ↓
-  </button>
-</article>
+        <p>
+          Нам очень хочется провести этот вечер рядом с людьми,
+          которые дороги нашей семье.
+        </p>
+
+        <div class="marriage-years">
+          <span>35 ЛЕТ</span>
+          <em>совместной жизни</em>
+        </div>
+
+        <p class="letter-signature">
+          Будем счастливы разделить этот праздник с вами.
+        </p>
+
+        <p class="letter-signature">
+          С любовью,<br>
+          семья Куулар ♡
+        </p>
+
+        <button
+          class="continue"
+          id="continueBtn"
+          type="button"
+        >
+          ПРОДОЛЖИТЬ ↓
+        </button>
+
+      </article>
+
     </section>
+
+
+    <!-- 2. ФОТОГРАФИЯ РОДИТЕЛЕЙ -->
 
     <section class="portrait" id="portrait">
-      <img src="parents.jpeg" alt="Борис Бораннайович и Урана Энеевна">
+
+      <img
+        src="parents.jpeg"
+        alt="Борис Бораннайович и Урана Энеевна"
+      >
+
       <div class="shade"></div>
-      <p class="quote left">История,<br>которую<br>мы пишем<br>вместе…<br> </p>
-      <p class="quote right">…и самое<br>ценное —<br>рядом<br> </p>
+
+      <p class="quote left">
+        История,<br>
+        которую<br>
+        мы пишем<br>
+        вместе…<br>
+        ♡
+      </p>
+
+      <p class="quote right">
+        …и самое<br>
+        ценное —<br>
+        рядом<br>
+        ♡
+      </p>
+
       <div class="names">
-        <div><h2>Борис<br>Бораннайович</h2><p>— 65 ЛЕТ —</p></div>
-        <b>│<br>♡<br>│</b>
-        <div><h2>Урана<br>Энеевна</h2><p>— 60 ЛЕТ —</p></div>
+
+        <div>
+          <h2>
+            Борис<br>
+            Бораннайович
+          </h2>
+
+          <p>— 65 ЛЕТ —</p>
+        </div>
+
+        <b>
+          │<br>
+          ♡<br>
+          │
+        </b>
+
+        <div>
+          <h2>
+            Урана<br>
+            Энеевна
+          </h2>
+
+          <p>— 60 ЛЕТ —</p>
+        </div>
+
       </div>
-      <div class="together">35 ЛЕТ ВМЕСТЕ</div>
+
+      <div class="together">
+        35 ЛЕТ ВМЕСТЕ
+      </div>
+
     </section>
+
+
+    <!-- 3. ИСТОРИЯ СЕМЬИ -->
 
     <section class="story velvet">
-      <article class="paper"> 
-        <h2>Любовь, ставшая<br>историей семьи</h2>
+
+      <article class="paper">
+
+        <small>СЕМЬЯ КУУЛАР</small>
+
+        <h2>
+          Любовь, ставшая<br>
+          историей семьи
+        </h2>
+
         <div class="rule">—— ♡ ——</div>
-        <p>Вместе пройти столько лет — значит беречь друг друга в каждом дне, быть опорой в трудные времена и разделять самые счастливые мгновения.</p>
-        <em>Будем счастливы разделить этот вечер с вами.</em>
+
+        <p>
+          Вместе пройти столько лет — значит беречь друг друга
+          в каждом дне, быть опорой в трудные времена
+          и разделять самые счастливые мгновения.
+        </p>
+
+        <p>
+          За 35 лет совместной жизни родился целый семейный мир —
+          тёплый, добрый и наполненный любовью.
+        </p>
+
+        <p>
+          В этот особенный день нам хочется, чтобы рядом были люди,
+          ставшие частью этой истории.
+        </p>
+
+        <em>
+          Будем счастливы разделить этот вечер с вами.
+        </em>
+
       </article>
+
     </section>
-<section class="details calendar-section">
-  <small>СОХРАНИТЕ ЭТУ ДАТУ</small>
 
-  <h2>Октябрь</h2>
-  <div class="calendar-year">2026</div>
 
-  <div class="minimal-calendar">
-    <div class="calendar-week">
-      <span>ПН</span>
-      <span>ВТ</span>
-      <span>СР</span>
-      <span>ЧТ</span>
-      <span>ПТ</span>
-      <span>СБ</span>
-      <span>ВС</span>
-    </div>
+    <!-- 4. ЕДИНСТВЕННЫЙ КАЛЕНДАРЬ -->
 
-    <div class="calendar-grid">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span>1</span>
-      <span>2</span>
+    <section class="details celebration-calendar">
 
-      <span class="selected-date">
-        3
-        <i class="spark spark-one"></i>
-        <i class="spark spark-two"></i>
-        <i class="spark spark-three"></i>
-      </span>
+      <small>СОХРАНИТЕ ЭТУ ДАТУ</small>
 
-      <span>4</span>
+      <h2>Октябрь</h2>
 
-      <span>5</span>
-      <span>6</span>
-      <span>7</span>
-      <span>8</span>
-      <span>9</span>
-      <span>10</span>
-      <span>11</span>
-
-      <span>12</span>
-      <span>13</span>
-      <span>14</span>
-      <span>15</span>
-      <span>16</span>
-      <span>17</span>
-      <span>18</span>
-
-      <span>19</span>
-      <span>20</span>
-      <span>21</span>
-      <span>22</span>
-      <span>23</span>
-      <span>24</span>
-      <span>25</span>
-
-      <span>26</span>
-      <span>27</span>
-      <span>28</span>
-      <span>29</span>
-      <span>30</span>
-      <span>31</span>
-      <span></span>
-    </div>
-  </div>
-
-  <p class="calendar-caption">
-    суббота · 3 октября · 16:00
-  </p>
-
-  <div class="calendar-celebration">
-    <span>ДВОЙНОЙ ЮБИЛЕЙ</span>
-    <strong>65 | 60</strong>
-    <em>35 лет вместе</em>
-  </div>
-
-  <p class="calendar-place">
-    Банкетный зал «Евразия»<br>
-    ул. Лопсанчапа, 35<br>
-    ТЦ «Континент»
-  </p>
-
-  <a
-    href="https://yandex.ru/maps/?text=Кызыл%20Лопсанчапа%2035%20ТЦ%20Континент"
-    target="_blank"
-  >
-    ОТКРЫТЬ КАРТУ
-  </a>
-</section>
-    <section class="details velvet">
-  <small>ДВОЙНОЙ ЮБИЛЕЙ</small>
-
-  <h2>65 | 60 лет</h2>
-
-  <p class="anniversary-text">
-    Борис Бораннайович и Урана Энеевна<br>
-    <strong>35 лет совместной жизни</strong>
-  </p>
-
-  <div class="calendar-scene">
-    <span class="firework firework-one"></span>
-    <span class="firework firework-two"></span>
-    <span class="firework firework-three"></span>
-
-    <div class="calendar">
-      <div class="calendar-top">
-        <span>ОКТЯБРЬ</span>
-        <b>2026</b>
+      <div class="calendar-year">
+        2026
       </div>
 
-      <div class="weekdays">
-        <span>ПН</span>
-        <span>ВТ</span>
-        <span>СР</span>
-        <span>ЧТ</span>
-        <span>ПТ</span>
-        <span>СБ</span>
-        <span>ВС</span>
+      <!-- Лёгкий салют -->
+
+      <div class="fireworks" aria-hidden="true">
+        <i class="burst burst-1"></i>
+        <i class="burst burst-2"></i>
+        <i class="burst burst-3"></i>
+        <i class="burst burst-4"></i>
       </div>
 
-      <div class="calendar-days">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span>1</span>
-        <span>2</span>
+      <!-- Календарь -->
 
-        <span class="celebration-day">
-          <b>3</b>
-          <i>♡</i>
-        </span>
+      <div class="calendar-paper">
 
-        <span>4</span>
-        <span>5</span>
-        <span>6</span>
-        <span>7</span>
-        <span>8</span>
-        <span>9</span>
-        <span>10</span>
-        <span>11</span>
-        <span>12</span>
-        <span>13</span>
-        <span>14</span>
-        <span>15</span>
-        <span>16</span>
-        <span>17</span>
-        <span>18</span>
-        <span>19</span>
-        <span>20</span>
-        <span>21</span>
-        <span>22</span>
-        <span>23</span>
-        <span>24</span>
-        <span>25</span>
-        <span>26</span>
-        <span>27</span>
-        <span>28</span>
-        <span>29</span>
-        <span>30</span>
-        <span>31</span>
+        <div class="calendar-week">
+          <span>ПН</span>
+          <span>ВТ</span>
+          <span>СР</span>
+          <span>ЧТ</span>
+          <span>ПТ</span>
+          <span>СБ</span>
+          <span>ВС</span>
+        </div>
+
+        <div class="calendar-grid">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>1</span>
+          <span>2</span>
+          <span class="selected-date">3</span>
+          <span>4</span>
+
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span>23</span>
+          <span>24</span>
+          <span>25</span>
+
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+          <span>31</span>
+          <span></span>
+
+        </div>
+
+        <p class="calendar-caption">
+          суббота · 3 октября
+        </p>
+
       </div>
-    </div>
-  </div>
 
-  <div class="event-time">
-    <span>03 ОКТЯБРЯ 2026</span>
-    <b>16:00</b>
-  </div>
+      <!-- Юбилей -->
 
-  <p class="place">
-    Банкетный зал «Евразия»<br>
-    ул. Лопсанчапа, 35<br>
-    ТЦ «Континент»
-  </p>
+      <div class="jubilee-date">
 
-  <a
-    href="https://yandex.ru/maps/?text=Кызыл%20Лопсанчапа%2035%20ТЦ%20Континент"
-    target="_blank"
-  >
-    ОТКРЫТЬ КАРТУ
-  </a>
-</section>
+        <span>ДВОЙНОЙ ЮБИЛЕЙ</span>
+
+        <strong>65 | 60</strong>
+
+        <em>35 лет совместной жизни</em>
+
+        <b>Начало в 16:00</b>
+
+      </div>
+
+      <!-- Адрес -->
+
+      <p class="calendar-place">
+        Банкетный зал «Евразия»<br>
+        ул. Лопсанчапа, 35<br>
+        ТЦ «Континент»
+      </p>
+
+      <a
+        href="https://yandex.ru/maps/?text=Кызыл%20Лопсанчапа%2035%20ТЦ%20Континент"
+        target="_blank"
+        rel="noopener"
+      >
+        ОТКРЫТЬ КАРТУ
+      </a>
+
+    </section>
+
+
+    <!-- 5. КОНТАКТ -->
 
     <section class="final velvet">
+
       <small>ДО ВСТРЕЧИ</small>
-      <h2>Будем ждать вас<br>на семейном празднике</h2>
+
+      <h2>
+        Будем ждать вас<br>
+        на семейном празднике
+      </h2>
+
       <div class="rule">—— ♡ ——</div>
-      <p>По всем вопросам:<br><em>Уруу Чойгана</em></p>
-      <a href="tel:+79233867870">+7 923 386-78-07</a>
-      <h3>С любовью, семья Куулар</h3>
+
+      <p>
+        По всем вопросам:<br>
+        <em>Уруу Чойгана</em>
+      </p>
+
+      <a href="tel:+79233867870">
+        +7 923 386-78-70
+      </a>
+
+      <h3>
+        С любовью, семья Куулар
+      </h3>
+
+      <i class="monogram">К</i>
+
     </section>
+
   </main>
+
   <script src="script.js"></script>
+
 </body>
 </html>
