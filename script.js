@@ -1,23 +1,8 @@
-const envelope = document.getElementById("envelope");
-const opening = document.getElementById("opening");
-const openButton = document.getElementById("openButton");
-const parents = document.getElementById("parents");
-
-function openInvitation() {
-  envelope.classList.add("open");
-  opening.classList.add("opened");
-}
-
-envelope.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  if (envelope.classList.contains("open")) {
-    parents.scrollIntoView({
-      behavior: "smooth"
-    });
-  } else {
-    openInvitation();
-  }
-});
-
-openButton.addEventListener("click", openInvitation);
+const opening=document.getElementById("opening");
+const envelope=document.getElementById("envelope");
+const openCta=document.getElementById("openCta");
+const continueBtn=document.getElementById("continueBtn");
+function openLetter(){opening.classList.add("open")}
+envelope.addEventListener("click",openLetter);
+openCta.addEventListener("click",openLetter);
+continueBtn.addEventListener("click",()=>document.getElementById("portrait").scrollIntoView({behavior:"smooth"}));
