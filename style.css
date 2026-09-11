@@ -1,368 +1,509 @@
-:root{--green:#06140e;--gold:#d9a76c;--cream:#f2e2cc;--ink:#3d2d20}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--green);color:var(--cream);font-family:"Cormorant Garamond",serif}.velvet,.opening{background:linear-gradient(#02100a4a,#02100a66),url("velvet-background.jpeg") center/cover no-repeat}.opening{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:90px 12px 82px}.opening header{position:absolute;z-index:5;top:24px;display:grid;gap:8px;text-align:center}.opening header span,.opening small,.story small,.details small,.final small{font:300 12px Montserrat,sans-serif;letter-spacing:.46em}.opening header i{color:var(--gold);font-style:normal}.envelope{width:min(760px,96vw);border:0;padding:0;background:none;cursor:pointer;filter:drop-shadow(0 24px 22px #000b);transition:transform .5s,opacity .65s}.envelope img{display:block;width:100%;height:auto}.envelope:hover{transform:translateY(-4px)}.open-cta{position:absolute;bottom:28px;border:0;background:none;color:white;font:300 10px Montserrat,sans-serif;letter-spacing:.32em}.open-cta b{display:grid;place-items:center;width:38px;height:38px;margin:12px auto 0;border:1px solid #fff8;border-radius:50%;font-size:20px}.letter{position:absolute;z-index:8;left:50%;top:52%;width:min(610px,88vw);max-height:78svh;overflow:auto;padding:44px 46px 34px;text-align:center;color:var(--ink);border:1px solid #9a74455c;background:linear-gradient(#f3e4cded,#f3e4cded),url("velvet-background.jpeg") center/cover;box-shadow:0 28px 55px #000b,inset 0 0 38px #8f673524;opacity:0;pointer-events:none;transform:translate(-50%,36%) scale(.92);transition:opacity .6s,transform .9s cubic-bezier(.2,.75,.2,1)}.letter:after,.paper:after{content:"";position:absolute;inset:10px;border:1px solid #9c744334;pointer-events:none}.letter small{font-family:"Cormorant Garamond";font-style:italic;letter-spacing:.25em}.letter h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:400;font-style:italic;line-height:.9;margin:15px 0}.rule{color:#a8743f;margin:14px}.letter p{font-size:1.2rem;font-style:italic;line-height:1.42;margin:12px auto;max-width:500px}.letter em{display:block;font-size:1.45rem;margin-top:14px}.continue{margin-top:18px;padding:11px 17px;border:1px solid #785b3980;background:transparent;color:var(--ink);font:italic 14px "Cormorant Garamond";letter-spacing:.17em}.opening.open .envelope{opacity:0;transform:translateY(26%) scale(.9);pointer-events:none}.opening.open .open-cta{opacity:0;pointer-events:none}.opening.open .letter{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}.portrait{position:relative;min-height:100svh;overflow:hidden;background:#07130e}.portrait>img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 32%}.shade{position:absolute;inset:0;background:linear-gradient(to top,#020906 0,#020906d9 27%,transparent 64%),linear-gradient(90deg,#020906bf,transparent 30% 70%,#020906bf)}.quote{position:absolute;z-index:2;top:8%;font-size:clamp(1.25rem,3vw,2rem);font-style:italic;line-height:1.14}.quote.left{left:6%}.quote.right{right:6%;text-align:right}.names{position:absolute;z-index:2;left:4%;right:4%;bottom:10%;display:grid;grid-template-columns:1fr 42px 1fr;align-items:center;text-align:center}.names h2{margin:0;color:var(--gold);font-size:clamp(2.6rem,8vw,5.3rem);font-weight:400;font-style:italic;line-height:.83;text-shadow:0 3px 12px #000}.names p,.together{font:300 12px Montserrat,sans-serif;letter-spacing:.34em}.names>b{font-weight:400;color:var(--gold);line-height:1.7}.together{position:absolute;z-index:2;bottom:3.5%;left:50%;transform:translateX(-50%);white-space:nowrap}.story{padding:90px 18px}.paper{position:relative;max-width:680px;margin:auto;padding:62px 52px;text-align:center;color:var(--ink);border:1px solid #aa885d6b;background:linear-gradient(105deg,#f5e8d5,#e3c9a6);box-shadow:0 30px 60px #000b}.paper h2,.details h2,.final h2{font-size:clamp(2.8rem,8vw,5.2rem);font-weight:400;font-style:italic;line-height:.9;margin:22px 0}.paper p{font-size:1.25rem;line-height:1.55}.paper em{font-size:1.55rem;color:#76502d}.details,.final{position:relative;min-height:100svh;padding:105px 20px;display:flex;flex-direction:column;justify-content:center;text-align:center}.details:before,.final:before{content:"";position:absolute;inset:0;background:#03110bbd}.details>*,.final>*{position:relative}.details h2,.final h2{color:var(--gold)}.date{width:min(640px,95vw);margin:30px auto;display:grid;grid-template-columns:1fr 145px 1fr;align-items:center}.date span{padding:15px 5px;border-block:1px solid #d7a76c77;font:300 12px Montserrat,sans-serif;letter-spacing:.25em}.date b{font-size:3rem;font-weight:400;color:var(--gold)}.details p,.final p{font-size:1.5rem;line-height:1.5}.details a,.final a{align-self:center;padding:14px 23px;color:var(--cream);border:1px solid var(--gold);text-decoration:none;font:300 12px Montserrat,sans-serif;letter-spacing:.18em}.final em{font-size:2rem;color:var(--gold)}.final h3{margin-top:58px;color:var(--gold);font-size:1.8rem;font-weight:400;font-style:italic}.monogram{display:grid;place-items:center;width:74px;height:74px;margin:0 auto;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:3rem}.portrait,.story,.details,.final{scroll-margin-top:0}
-@media(max-width:650px){.opening{padding-inline:5px}.envelope{width:102vw}.letter{padding:35px 23px 28px}.letter p{font-size:1rem}.portrait{min-height:760px}.portrait>img{object-position:center top}.quote{font-size:1.05rem}.names{left:6px;right:6px;grid-template-columns:1fr 24px 1fr}.names h2{font-size:2.35rem}.names p{font-size:9px;letter-spacing:.18em}.paper{padding:48px 25px}.paper p{font-size:1.12rem}.date{grid-template-columns:1fr 105px 1fr}.date span{font-size:9px;letter-spacing:.12em}.date b{font-size:2.35rem}}
-/* УБИРАЕМ ЗАТЕМНЕНИЕ ФОТОГРАФИИ */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400&display=swap");
 
-.portrait .shade {
-  display: none !important;
+:root {
+  --green: #06140e;
+  --deep-green: #020a06;
+  --gold: #d9a76c;
+  --light-gold: #f0d1a2;
+  --cream: #f2e2cc;
+  --paper: #eee0ca;
+  --ink: #3d2d20;
 }
 
-.portrait > img {
-  filter: none !important;
+* {
+  box-sizing: border-box;
 }
 
-/* Небольшая тень только под именами */
-
-.names::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: -20px;
-  right: -20px;
-  top: -45px;
-  bottom: -50px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(2, 9, 6, 0.48)
-  );
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-/* ТЕКСТ ДВОЙНОГО ЮБИЛЕЯ */
-
-.anniversary-text {
-  margin: 5px auto 25px;
-  font-size: 1.4rem !important;
-  font-style: italic;
-  line-height: 1.45;
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--cream);
+  background: var(--green);
+  font-family: "Cormorant Garamond", serif;
 }
 
-.anniversary-text strong {
-  color: var(--gold);
-  font-size: 1.65rem;
-  font-weight: 400;
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* КАЛЕНДАРЬ */
-
-.calendar-scene {
-  position: relative;
-  width: min(420px, 92vw);
-  margin: 20px auto 32px;
+button {
+  font-family: inherit;
 }
 
-.calendar {
-  position: relative;
-  z-index: 3;
-  overflow: hidden;
-  color: #3e2c1e;
-  border: 1px solid rgba(218, 167, 105, 0.8);
-  border-radius: 4px;
+.velvet,
+.opening,
+.celebration-calendar {
   background:
     linear-gradient(
-      105deg,
-      rgba(255, 250, 240, 0.96),
-      rgba(231, 210, 178, 0.96)
-    );
-  box-shadow:
-    0 22px 45px rgba(0, 0, 0, 0.55),
-    inset 0 0 35px rgba(135, 92, 45, 0.12);
+      rgba(2, 12, 8, 0.3),
+      rgba(2, 12, 8, 0.55)
+    ),
+    url("velvet-background.jpeg") center / cover no-repeat;
 }
 
-.calendar-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 19px 25px;
-  color: #f7e8d3;
-  background: linear-gradient(135deg, #153426, #071810);
-}
+/* 1. ПЕРВЫЙ ЭКРАН */
 
-.calendar-top span {
-  font: 300 13px "Montserrat", sans-serif;
-  letter-spacing: 0.35em;
-}
-
-.calendar-top b {
-  color: var(--gold);
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-
-.weekdays,
-.calendar-days {
+.opening {
+  position: relative;
+  min-height: 100svh;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  place-items: center;
+  overflow: hidden;
+  padding: 90px 8px 85px;
+}
+
+.opening header {
+  position: absolute;
+  z-index: 5;
+  top: 24px;
+  display: grid;
+  gap: 8px;
+  width: 100%;
   text-align: center;
 }
 
-.weekdays {
-  padding: 16px 16px 8px;
-  color: #88633e;
-  font: 400 10px "Montserrat", sans-serif;
-  letter-spacing: 0.08em;
+.opening header span {
+  font: 300 12px "Montserrat", sans-serif;
+  letter-spacing: 0.46em;
 }
 
-.calendar-days {
-  gap: 4px;
-  padding: 5px 16px 22px;
+.opening header i {
+  color: var(--gold);
+  font-style: normal;
 }
 
-.calendar-days > span {
-  position: relative;
+/* КОНВЕРТ */
+
+.envelope {
+  width: min(760px, 96vw);
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.7));
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.envelope img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.envelope:active {
+  transform: scale(0.98);
+}
+
+.open-cta {
+  position: absolute;
+  z-index: 6;
+  bottom: 25px;
+  padding: 0;
+  color: white;
+  border: 0;
+  background: transparent;
+  font: 300 10px "Montserrat", sans-serif;
+  letter-spacing: 0.3em;
+  transition: opacity 0.4s ease;
+}
+
+.open-cta b {
   display: grid;
   place-items: center;
-  min-height: 38px;
-  font-size: 1.05rem;
-}
-
-.celebration-day {
-  color: white;
+  width: 38px;
+  height: 38px;
+  margin: 12px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-  background: radial-gradient(
-    circle at 35% 30%,
-    #efbf75,
-    #a56728 65%,
-    #714010
-  );
-  box-shadow:
-    0 5px 14px rgba(81, 42, 8, 0.38),
-    0 0 0 4px rgba(210, 158, 91, 0.18);
-  animation: celebrationPulse 2s ease-in-out infinite;
+  font-size: 20px;
+  font-weight: 300;
 }
 
-.celebration-day b {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
+/* ПИСЬМО */
 
-.celebration-day i {
+.letter {
   position: absolute;
-  right: -2px;
-  bottom: -7px;
-  color: #9b5c22;
-  font-size: 15px;
-}
-
-/* ЛЁГКИЙ САЛЮТ БЕЗ JAVASCRIPT */
-
-.firework {
-  position: absolute;
-  z-index: 2;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--gold);
+  z-index: 10;
+  top: 52%;
+  left: 50%;
+  width: min(610px, 90vw);
+  max-height: 82svh;
+  overflow-y: auto;
+  padding: 38px 42px 30px;
+  color: var(--ink);
+  text-align: center;
+  border: 1px solid rgba(154, 116, 69, 0.55);
+  background:
+    linear-gradient(
+      105deg,
+      rgba(248, 237, 219, 0.98),
+      rgba(228, 204, 170, 0.98)
+    );
   box-shadow:
-    0 -27px var(--gold),
-    19px -19px #f7dfb7,
-    27px 0 #c98b45,
-    19px 19px #f7dfb7,
-    0 27px var(--gold),
-    -19px 19px #c98b45,
-    -27px 0 #f7dfb7,
-    -19px -19px var(--gold);
+    0 28px 55px rgba(0, 0, 0, 0.72),
+    inset 0 0 38px rgba(143, 103, 53, 0.14);
   opacity: 0;
-  animation: fireworkBurst 3s ease-out infinite;
+  pointer-events: none;
+  transform: translate(-50%, 32%) scale(0.92);
+  transition:
+    opacity 0.6s ease,
+    transform 0.9s cubic-bezier(0.2, 0.75, 0.2, 1);
 }
 
-.firework-one {
-  top: 8%;
-  left: -8px;
+.letter::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(156, 116, 67, 0.25);
+  pointer-events: none;
 }
 
-.firework-two {
-  top: 28%;
-  right: -5px;
-  animation-delay: 1s;
+.letter > * {
+  position: relative;
+  z-index: 2;
 }
 
-.firework-three {
-  right: 10%;
-  bottom: -5px;
-  animation-delay: 2s;
+.letter small {
+  display: block;
+  color: #76583a;
+  font: 400 11px "Montserrat", sans-serif;
+  letter-spacing: 0.34em;
 }
 
-@keyframes fireworkBurst {
-  0% {
-    opacity: 0;
-    transform: scale(0.15);
-  }
-
-  15% {
-    opacity: 1;
-  }
-
-  45% {
-    opacity: 0;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-
-@keyframes celebrationPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.08);
-  }
-}
-
-/* ДАТА И ВРЕМЯ */
-
-.event-time {
-  width: min(500px, 94vw);
-  margin: 5px auto 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding: 14px;
-  border-top: 1px solid rgba(216, 166, 108, 0.55);
-  border-bottom: 1px solid rgba(216, 166, 108, 0.55);
-}
-
-.event-time span {
-  font: 300 11px "Montserrat", sans-serif;
-  letter-spacing: 0.2em;
-}
-
-.event-time b {
-  color: var(--gold);
-  font-size: 1.8rem;
+.jubilee-numbers {
+  margin: 12px 0 5px;
+  color: #a96f32;
+  font-size: clamp(4rem, 15vw, 7rem);
   font-weight: 400;
+  font-style: italic;
+  line-height: 0.9;
 }
 
-.place {
-  margin-top: 5px;
+.jubilee-numbers i {
+  color: #8e7254;
+  font-size: 0.62em;
+  font-weight: 300;
 }
 
-/* Не запускаем анимацию, если телефон просит уменьшить движение */
-
-@media (prefers-reduced-motion: reduce) {
-  .firework,
-  .celebration-day {
-    animation: none;
-  }
+.jubilee-names {
+  margin: 8px 0 12px;
+  color: #513b29;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.15;
 }
 
-@media (max-width: 650px) {
-  .details {
-    padding: 75px 12px;
-  }
-
-  .details h2 {
-    margin: 18px 0 12px;
-  }
-
-  .anniversary-text {
-    font-size: 1.15rem !important;
-  }
-
-  .anniversary-text strong {
-    font-size: 1.35rem;
-  }
-
-  .calendar-top {
-    padding: 16px 20px;
-  }
-
-  .calendar-days > span {
-    min-height: 34px;
-  }
-
-  .event-time {
-    gap: 14px;
-  }
-
-  .event-time span {
-    font-size: 9px;
-    letter-spacing: 0.12em;
-  }
+.rule {
+  margin: 14px;
+  color: #a8743f;
 }
-/* Затемнение фотографии до самого нижнего края */
 
-.names::before {
-  display: none !important;
+.letter > p {
+  max-width: 500px;
+  margin: 11px auto;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.4;
 }
+
+.marriage-years {
+  width: min(380px, 92%);
+  margin: 20px auto 15px;
+  padding: 13px 8px;
+  border-top: 1px solid rgba(137, 96, 50, 0.35);
+  border-bottom: 1px solid rgba(137, 96, 50, 0.35);
+}
+
+.marriage-years span {
+  display: block;
+  color: #a96f32;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+}
+
+.marriage-years em {
+  display: block;
+  margin-top: 3px;
+  color: #6d5237;
+  font-size: 1.25rem;
+}
+
+.letter-signature {
+  color: #79542e;
+  font-size: 1.25rem !important;
+}
+
+.continue {
+  margin-top: 15px;
+  padding: 11px 18px;
+  color: var(--ink);
+  border: 1px solid rgba(120, 91, 57, 0.55);
+  background: transparent;
+  font: italic 14px "Cormorant Garamond", serif;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+}
+
+/* ОТКРЫТИЕ ПИСЬМА */
+
+.opening.open .envelope {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(25%) scale(0.9);
+}
+
+.opening.open .open-cta {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opening.open .letter {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* 2. ФОТОГРАФИЯ */
+
+.portrait {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--green);
+}
+
+/*
+Фото занимает верхние 72% экрана.
+Так кадр получается ближе, но уши не обрезаются.
+*/
+
+.portrait > img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72%;
+  object-fit: cover;
+  object-position: center 48%;
+  filter: none;
+}
+
+.portrait .shade {
+  display: none;
+}
+
+/* Плавный переход фотографии в тёмный фон */
 
 .portrait::after {
   content: "";
   position: absolute;
   z-index: 1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 55%;
+  inset: auto 0 0;
+  height: 60%;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(2, 9, 6, 0.25) 25%,
-    rgba(2, 9, 6, 0.72) 70%,
-    rgba(2, 9, 6, 0.92) 100%
+    rgba(3, 13, 9, 0.16) 16%,
+    rgba(3, 13, 9, 0.72) 52%,
+    var(--green) 75%,
+    var(--green) 100%
   );
 }
 
-.portrait .names,
-.portrait .together,
-.portrait .quote {
+.quote {
+  position: absolute;
   z-index: 2;
+  top: 7%;
+  margin: 0;
+  color: #f2dfc5;
+  font-size: clamp(1.15rem, 3vw, 2rem);
+  font-style: italic;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
-/* Новый минималистичный календарь */
 
-.calendar-section {
-  position: relative;
-  min-height: 100svh;
-  display: block;
-  padding: 100px 22px 90px;
-  color: #34342f;
-  background: #f5f2eb !important;
+.quote.left {
+  left: 6%;
+}
+
+.quote.right {
+  right: 6%;
+  text-align: right;
+}
+
+.names {
+  position: absolute;
+  z-index: 2;
+  right: 3%;
+  bottom: 9%;
+  left: 3%;
+  display: grid;
+  grid-template-columns: 1fr 38px 1fr;
+  align-items: center;
   text-align: center;
 }
 
-.calendar-section::before {
-  display: none !important;
+.names h2 {
+  margin: 0;
+  color: var(--gold);
+  font-size: clamp(2.5rem, 8vw, 5.2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.84;
+  text-shadow: 0 3px 12px black;
 }
 
-.calendar-section > * {
+.names p {
+  margin: 13px 0 0;
+  font: 300 11px "Montserrat", sans-serif;
+  letter-spacing: 0.28em;
+}
+
+.names > b {
+  color: var(--gold);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.together {
+  position: absolute;
+  z-index: 2;
+  bottom: 2.8%;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: 300 11px "Montserrat", sans-serif;
+  letter-spacing: 0.35em;
+}
+
+/* 3. ИСТОРИЯ СЕМЬИ */
+
+.story {
+  padding: 90px 18px;
+}
+
+.paper {
+  position: relative;
+  max-width: 680px;
+  margin: auto;
+  padding: 58px 48px;
+  color: var(--ink);
+  text-align: center;
+  border: 1px solid rgba(170, 136, 93, 0.6);
+  background: linear-gradient(
+    105deg,
+    #f5e8d5,
+    #e3c9a6
+  );
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.72);
+}
+
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(156, 116, 67, 0.25);
+  pointer-events: none;
+}
+
+.paper > * {
   position: relative;
   z-index: 2;
 }
 
-.calendar-section > small {
-  display: block;
-  color: #7e896d;
-  font: 300 12px "Montserrat", sans-serif;
-  letter-spacing: 0.38em;
+.paper small,
+.celebration-calendar > small,
+.final > small {
+  font: 300 11px "Montserrat", sans-serif;
+  letter-spacing: 0.4em;
 }
 
-.calendar-section > h2 {
-  margin: 45px 0 5px;
-  color: #34342f !important;
-  font-size: clamp(4.5rem, 16vw, 7rem);
+.paper h2,
+.celebration-calendar > h2,
+.final h2 {
+  margin: 22px 0;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   line-height: 0.9;
 }
 
-.calendar-year {
-  margin-bottom: 70px;
-  color: #839072;
-  font-size: 3rem;
+.paper p {
+  font-size: 1.22rem;
+  line-height: 1.5;
+}
+
+.paper em {
+  color: #76502d;
+  font-size: 1.5rem;
+}
+
+/* 4. КАЛЕНДАРЬ */
+
+.celebration-calendar {
+  position: relative;
+  min-height: 100svh;
+  display: block;
+  overflow: hidden;
+  padding: 85px 18px;
+  text-align: center;
+}
+
+.celebration-calendar::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: rgba(2, 12, 8, 0.38);
+}
+
+.celebration-calendar > * {
+  position: relative;
+  z-index: 3;
+}
+
+.celebration-calendar > small {
+  color: #ead6ba;
+}
+
+.celebration-calendar > h2 {
+  margin: 28px 0 0;
+  color: var(--gold);
+  font-size: clamp(4.2rem, 16vw, 7rem);
   font-style: italic;
 }
 
-.minimal-calendar {
-  width: min(650px, 100%);
+.calendar-year {
+  margin: 6px 0 32px;
+  color: #ead6ba;
+  font-size: 2.2rem;
+  font-style: italic;
+}
+
+.calendar-paper {
+  width: min(560px, 94vw);
   margin: auto;
+  padding: 32px 22px 27px;
+  color: #3e382f;
+  border: 1px solid rgba(216, 169, 108, 0.75);
+  background: linear-gradient(
+    110deg,
+    #f7efe2,
+    #e6d0ae
+  );
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.65),
+    inset 0 0 35px rgba(133, 91, 43, 0.12);
 }
 
 .calendar-week,
@@ -370,264 +511,383 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
-  text-align: center;
 }
 
 .calendar-week {
-  margin-bottom: 40px;
-  color: #93958c;
-  font: 400 12px "Montserrat", sans-serif;
+  margin-bottom: 22px;
+  color: #8a7e6e;
+  font: 400 10px "Montserrat", sans-serif;
 }
 
 .calendar-grid {
-  row-gap: 23px;
+  row-gap: 11px;
 }
 
 .calendar-grid > span {
-  position: relative;
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   margin: auto;
-  color: #3c3c36;
-  font-size: 1.45rem;
+  font-size: 1.15rem;
   font-style: italic;
 }
 
 .selected-date {
-  color: #ffffff !important;
+  color: white;
   border-radius: 50%;
-  background: #7e8b68;
-  box-shadow: 0 8px 20px rgba(88, 101, 69, 0.24);
-  animation: datePulse 2.4s ease-in-out infinite;
-}
-
-/* Маленький лёгкий салют вокруг числа */
-
-.spark {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #bc8b4c;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.spark::before,
-.spark::after {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #d3aa72;
-}
-
-.spark::before {
-  transform: translate(-10px, 6px);
-}
-
-.spark::after {
-  transform: translate(9px, -7px);
-}
-
-.spark-one {
-  top: -5px;
-  left: 5px;
-  animation: smallFirework 2.8s ease-out infinite;
-}
-
-.spark-two {
-  top: 5px;
-  right: -2px;
-  animation: smallFirework 2.8s 0.9s ease-out infinite;
-}
-
-.spark-three {
-  right: 8px;
-  bottom: -4px;
-  animation: smallFirework 2.8s 1.8s ease-out infinite;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #e4b46e,
+    #a66a2d 65%,
+    #724115
+  );
+  box-shadow:
+    0 0 0 5px rgba(220, 174, 111, 0.17),
+    0 7px 16px rgba(86, 46, 13, 0.38);
+  animation: dateGlow 2s ease-in-out infinite;
 }
 
 .calendar-caption {
-  margin: 65px 0 45px !important;
-  color: #758064;
-  font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+  margin: 27px 0 0;
+  color: #798267;
+  font-size: 1.65rem;
   font-style: italic;
 }
 
-.calendar-celebration {
+.jubilee-date {
   display: grid;
-  gap: 8px;
-  width: min(430px, 100%);
-  margin: 0 auto 45px;
-  padding: 30px 15px;
-  border-top: 1px solid rgba(126, 139, 104, 0.35);
-  border-bottom: 1px solid rgba(126, 139, 104, 0.35);
+  gap: 6px;
+  width: min(470px, 94vw);
+  margin: 38px auto 28px;
 }
 
-.calendar-celebration span {
-  color: #7e896d;
-  font: 300 11px "Montserrat", sans-serif;
-  letter-spacing: 0.32em;
+.jubilee-date span {
+  font: 300 10px "Montserrat", sans-serif;
+  letter-spacing: 0.35em;
 }
 
-.calendar-celebration strong {
-  color: #a6753f;
-  font-size: 3.6rem;
+.jubilee-date strong {
+  color: var(--gold);
+  font-size: 4.2rem;
   font-weight: 400;
   line-height: 1;
 }
 
-.calendar-celebration em {
-  color: #758064;
-  font-size: 1.65rem;
+.jubilee-date em {
+  color: #ead6ba;
+  font-size: 1.6rem;
+}
+
+.jubilee-date b {
+  margin-top: 7px;
+  color: var(--gold);
+  font-size: 1.35rem;
+  font-weight: 400;
 }
 
 .calendar-place {
-  color: #45453e;
-  font-size: 1.4rem !important;
+  margin: 12px 0 25px;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
-.calendar-section > a {
+.celebration-calendar > a {
   display: inline-block;
-  margin-top: 15px;
-  padding: 14px 24px;
-  color: #758064;
-  border: 1px solid #879173;
-  background: transparent;
+  padding: 14px 23px;
+  color: var(--cream);
+  border: 1px solid var(--gold);
   text-decoration: none;
-  font: 400 11px "Montserrat", sans-serif;
-  letter-spacing: 0.2em;
+  font: 300 11px "Montserrat", sans-serif;
+  letter-spacing: 0.18em;
 }
 
-.letter-ending {
-  font-size: 1.3rem !important;
-  color: #79542e;
+/* САЛЮТ */
+
+.fireworks {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
 }
 
-@keyframes datePulse {
+.burst {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e7b56f;
+  box-shadow:
+    0 -38px #e7b56f,
+    27px -27px #fff0cb,
+    38px 0 #c9853d,
+    27px 27px #fff0cb,
+    0 38px #e7b56f,
+    -27px 27px #c9853d,
+    -38px 0 #fff0cb,
+    -27px -27px #e7b56f,
+    13px -31px #ffffff,
+    31px -13px #c9853d,
+    31px 13px #ffffff,
+    13px 31px #c9853d,
+    -13px 31px #ffffff,
+    -31px 13px #e7b56f,
+    -31px -13px #ffffff,
+    -13px -31px #c9853d;
+  opacity: 0;
+  animation: goldBurst 4s ease-out infinite;
+}
+
+.burst-1 {
+  top: 14%;
+  left: 12%;
+}
+
+.burst-2 {
+  top: 22%;
+  right: 11%;
+  animation-delay: 1s;
+}
+
+.burst-3 {
+  top: 50%;
+  left: 8%;
+  animation-delay: 2s;
+}
+
+.burst-4 {
+  top: 59%;
+  right: 8%;
+  animation-delay: 3s;
+}
+
+@keyframes goldBurst {
+  0% {
+    opacity: 0;
+    transform: scale(0.15);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes dateGlow {
   0%,
   100% {
     transform: scale(1);
   }
 
   50% {
-    transform: scale(1.08);
+    transform: scale(1.09);
   }
 }
 
-@keyframes smallFirework {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
+/* 5. ФИНАЛЬНЫЙ ЭКРАН */
 
-  20% {
-    opacity: 1;
-  }
-
-  55% {
-    opacity: 0;
-    transform: scale(1.8);
-  }
-
-  100% {
-    opacity: 0;
-  }
+.final {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 95px 20px;
+  text-align: center;
 }
+
+.final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 12, 8, 0.55);
+}
+
+.final > * {
+  position: relative;
+  z-index: 2;
+}
+
+.final h2 {
+  color: var(--gold);
+}
+
+.final p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.final p em {
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.final > a {
+  align-self: center;
+  padding: 14px 23px;
+  color: var(--cream);
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  font: 300 12px "Montserrat", sans-serif;
+  letter-spacing: 0.16em;
+}
+
+.final h3 {
+  margin-top: 58px;
+  color: var(--gold);
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
 
 @media (max-width: 650px) {
-  .calendar-section {
-    padding: 80px 14px 75px;
+  .opening {
+    padding-right: 5px;
+    padding-left: 5px;
   }
 
-  .calendar-section > h2 {
-    margin-top: 38px;
-  }
-
-  .calendar-year {
-    margin-bottom: 55px;
-    font-size: 2.5rem;
-  }
-
-  .calendar-week {
-    margin-bottom: 32px;
+  .opening header span {
     font-size: 10px;
+    letter-spacing: 0.34em;
   }
 
-  .calendar-grid {
-    row-gap: 18px;
+  .envelope {
+    width: 101vw;
   }
 
-  .calendar-grid > span {
-    width: 39px;
-    height: 39px;
+  .letter {
+    width: 91vw;
+    max-height: 83svh;
+    padding: 32px 20px 27px;
+  }
+
+  .letter > p {
+    font-size: 1rem;
+    line-height: 1.34;
+  }
+
+  .jubilee-numbers {
+    font-size: 4.4rem;
+  }
+
+  .jubilee-names {
     font-size: 1.25rem;
   }
 
-  .calendar-caption {
-    margin-top: 55px !important;
+  .marriage-years {
+    margin-top: 17px;
+    padding: 10px 6px;
+  }
+
+  .marriage-years span {
+    font-size: 1.7rem;
+  }
+
+  .portrait {
+    min-height: 760px;
+  }
+
+  .portrait > img {
+    height: 72%;
+    object-position: center 48%;
+  }
+
+  .quote {
+    top: 5%;
+    font-size: 1.03rem;
+  }
+
+  .names {
+    right: 5px;
+    bottom: 9%;
+    left: 5px;
+    grid-template-columns: 1fr 24px 1fr;
+  }
+
+  .names h2 {
+    font-size: 2.3rem;
+  }
+
+  .names p {
+    font-size: 9px;
+    letter-spacing: 0.17em;
+  }
+
+  .together {
+    font-size: 9px;
+    letter-spacing: 0.28em;
+  }
+
+  .story {
+    padding: 75px 14px;
+  }
+
+  .paper {
+    padding: 48px 23px;
+  }
+
+  .paper p {
+    font-size: 1.1rem;
+  }
+
+  .celebration-calendar {
+    padding: 75px 10px;
+  }
+
+  .calendar-paper {
+    padding: 28px 12px 24px;
+  }
+
+  .calendar-week {
+    font-size: 9px;
+  }
+
+  .calendar-grid > span {
+    width: 35px;
+    height: 35px;
+    font-size: 1.05rem;
+  }
+
+  .jubilee-date strong {
+    font-size: 3.8rem;
+  }
+
+  .burst {
+    transform-origin: center;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .selected-date,
-  .spark {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .burst,
+  .selected-date {
     animation: none;
   }
-}
-/* Показываем фотографию родителей полностью */
-
-.portrait {
-  position: relative;
-  isolation: isolate;
-  background: #07130e;
-}
-
-/* Мягкое заполнение пустого пространства */
-
-.portrait::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: -25px;
-  background:
-    linear-gradient(rgba(3, 14, 9, 0.48), rgba(3, 14, 9, 0.48)),
-    url("parents.jpeg") center / cover no-repeat;
-  filter: blur(18px);
-}
-
-/* Основная фотография без обрезания людей */
-
-.portrait > img {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-  object-position: center center !important;
-  filter: none !important;
-}
-
-/* Плавное затемнение только снизу */
-
-.portrait::after {
-  z-index: 1;
-  height: 52%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(2, 9, 6, 0.2) 25%,
-    rgba(2, 9, 6, 0.7) 72%,
-    rgba(2, 9, 6, 0.94) 100%
-  );
-}
-
-.portrait .quote,
-.portrait .names,
-.portrait .together {
-  z-index: 2;
 }
